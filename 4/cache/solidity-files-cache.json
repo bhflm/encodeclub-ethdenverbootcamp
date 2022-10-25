@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/germanbonin/Desktop/encodeclub/ethdenver-bootcamp/4/contracts/VolcanoCoin.sol": {
+      "lastModificationDate": 1666703213302,
+      "contentHash": "1641e4d4386030b7ed06a595e25dd573",
+      "sourceName": "contracts/VolcanoCoin.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "VolcanoCoin"
+      ]
+    }
+  }
+}
