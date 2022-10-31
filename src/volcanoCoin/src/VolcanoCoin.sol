@@ -31,9 +31,10 @@ contract VolcanoCoin {
         return totalSupply;
     }
     
-    function changeTotalSupply() public isOwner {
+    function changeTotalSupply() public isOwner returns(uint256){
         totalSupply += 1000; 
         emit totalSupplyChanged(totalSupply);
+        return totalSupply;
     }
 
     function transfer(uint amount, address recipient) public {

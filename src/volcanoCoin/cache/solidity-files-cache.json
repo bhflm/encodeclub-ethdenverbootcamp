@@ -315,8 +315,8 @@
       }
     },
     "src/VolcanoCoin.sol": {
-      "lastModificationDate": 1667224701784,
-      "contentHash": "1641e4d4386030b7ed06a595e25dd573",
+      "lastModificationDate": 1667233037465,
+      "contentHash": "43b7b9a3b5b32169621ee2969914770c",
       "sourceName": "src/VolcanoCoin.sol",
       "solcConfig": {
         "settings": {
@@ -355,8 +355,8 @@
       }
     },
     "test/VolcanoCoin.t.sol": {
-      "lastModificationDate": 1667229907064,
-      "contentHash": "a0097b110f8896dd86574e602eb21330",
+      "lastModificationDate": 1667234663756,
+      "contentHash": "38fe48d881501a3c1dd95fe325e7b8c4",
       "sourceName": "test/VolcanoCoin.t.sol",
       "solcConfig": {
         "settings": {

@@ -10,8 +10,16 @@ contract ContractVolcanoCoin is Test {
         volcano = new VolcanoCoin();
     }
 
-    function testVolcanoInitialSupply() public {
+    function testInitialSupply() public {
         assertEq(volcano.returnTotalSupply(), 10000);
     }
-    
+
+    function testSupplyChange() public {
+        assertEq(volcano.changeTotalSupply(), 11000);
+    }
+
+    function testFailIncrementAsNotOwner() public {
+      vm.prank(address(0));
+      volcano.changeTotalSupply();
+    }
 }
