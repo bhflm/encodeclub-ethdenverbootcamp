@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import "../../lib/ds-test/src/test.sol";
+import "forge-std/Test.sol";
 import '../src/VolcanoCoin.sol';
 
 contract ContractVolcanoCoin is Test {
