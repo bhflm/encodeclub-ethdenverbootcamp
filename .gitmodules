@@ -1,3 +1,6 @@
 [submodule "src/volcanoCoin/lib/forge-std"]
 	path = src/volcanoCoin/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "src/nftVolcanoCoin/lib/forge-std"]
+	path = src/nftVolcanoCoin/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
