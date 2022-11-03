@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract VolcanoNFT is ERC721, Ownable {
+contract VolcanoNft is ERC721, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
@@ -23,6 +23,7 @@ contract VolcanoNFT is ERC721, Ownable {
            revert("Volcanoes are sold out!");
         }
         _tokenIds.increment();
-        _safeMint(to, newItemId);        
+        _safeMint(to, newItemId);    
+        emit newVolcano(newItemId, to);    
     }
 }
