@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
+
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
@@ -13,10 +15,18 @@ contract VolcanoNft is ERC721, Ownable {
     event newVolcano(uint256 tokenId, address minter);
 
     uint256 public MAX_VOLCANOS = 100;
+    IERC20 public tokenAddress;
+    /**
+     * No concept of decimals in solidity, everything is an integer, 
+     * last 18 digits are after the decimal
+     */
+    address public VolcanoRate = 100 * 10 ** 18; 
+    constructor(address _tokenAddress) ERC721("Volcanos", "VLCN") public {
+        tokenAddress = IERC20(_tokenAddress);
+    }
 
-    constructor() ERC721("Volcanos", "VLCN") public {}
-
-    function mint(address to) public onlyOwner {
+    function safeMint(address to) public onlyOwner {
+        tokenAddress.transferFrom(msg.sender, address(this), volcanoRate);
         uint256 newItemId = _tokenIds.current();
 
         if (newItemId >= MAX_VOLCANOS) {
@@ -26,4 +36,8 @@ contract VolcanoNft is ERC721, Ownable {
         _safeMint(to, newItemId);    
         emit newVolcano(newItemId, to);    
     }
+
+    function approve(address _spender, uint256 _value) public {
+
+    };
 }
