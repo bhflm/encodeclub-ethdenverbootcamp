@@ -27,7 +27,7 @@ contract VolcanoNft is ERC721, Ownable {
         // tokenAddress = IERC20(_tokenAddress);
     }
 
-    function safeMint(address to) public onlyOwner  {
+    function safeMint(address to) public virtual payable onlyOwner  {
         // tokenAddress.transferFrom(msg.sender, address(this), VolcanoRate);
         uint256 newItemId = _tokenIds.current();
 
