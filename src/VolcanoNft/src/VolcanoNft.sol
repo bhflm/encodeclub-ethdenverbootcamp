@@ -21,12 +21,14 @@ contract VolcanoNft is ERC721, Ownable {
      * last 18 digits are after the decimal
      */
     address public VolcanoRate = 100 * 10 ** 18; 
-    constructor(address _tokenAddress) ERC721("Volcanos", "VLCN") public {
-        tokenAddress = IERC20(_tokenAddress);
+
+
+    constructor() ERC721("Volcanos", "VLCN") public {
+        // tokenAddress = IERC20(_tokenAddress);
     }
 
-    function safeMint(address to) public onlyOwner {
-        tokenAddress.transferFrom(msg.sender, address(this), volcanoRate);
+    function safeMint(address to) public onlyOwner  {
+        // tokenAddress.transferFrom(msg.sender, address(this), VolcanoRate);
         uint256 newItemId = _tokenIds.current();
 
         if (newItemId >= MAX_VOLCANOS) {
@@ -36,8 +38,4 @@ contract VolcanoNft is ERC721, Ownable {
         _safeMint(to, newItemId);    
         emit newVolcano(newItemId, to);    
     }
-
-    function approve(address _spender, uint256 _value) public {
-
-    };
 }

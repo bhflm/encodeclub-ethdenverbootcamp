@@ -12,6 +12,6 @@ contract VolcanoTest is Test {
     }
 
     function testMint() public {
-        volcano.mint(msg.sender);
+        volcano.safeMint(msg.sender);
     }
 }

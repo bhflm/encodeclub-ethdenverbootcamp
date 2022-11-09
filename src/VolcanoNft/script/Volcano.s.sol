@@ -6,8 +6,7 @@ import "../src/VolcanoNft.sol";
 
 contract VolcanoScript is Script {
     function run() public {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        vm.startBroadcast(deployerPrivateKey);
+        vm.startBroadcast();
 
         VolcanoNft volcano = new VolcanoNft();
 
